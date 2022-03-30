@@ -1,0 +1,19 @@
+server:
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: true
+      # nginx.ingress.kubernetes.io/ssl-passthrough: true
+    hosts:
+      - argocd.localhost
+  extraArgs:
+    - --insecure
+    # tls:
+      # - secretName: argocd-secret
+        # hosts:
+          # - argocd.localhost
+
+  # config:
+    # url: https://argocd.localhost
+    # admin.enabled: "false"
